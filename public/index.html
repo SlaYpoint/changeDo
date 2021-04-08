@@ -7,6 +7,35 @@
     <link rel="stylesheet" type="text/css" href="../src/styles.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>change<span class="text--focus">Do</span></h1>
+            <small>Let us make cashiers job easy!</small>
+        </header>
+        <!-- Input -->
+        <section class="data">
+            <input type="text" id="bal" class="input__box" placeholder="Bill amount">
+            <input type="text" id="rcvd" class="input__box" placeholder="Cash received">
+        </section>
+        <!-- Processing -->
+        <button id="check" class="btn primary__btn">Do!</button>
+        <!-- Output -->
+        <div class="denoms">
+            <h4>Denominations</h4>
+            
+        </div>
+        <!-- Help -->
+        <section class="help">
+            <p>
+                <strong>How to use ?</strong>
+            </p>
+            <p>
+                Enter the balance amount and cash received from the customer
+                and the app would tell you how much change to return your customer
+                by displaying note denominations.
+            </p>
+        </section>
+    </div>
     <script src="../src/app.js"></script>
 </body>
 </html>
