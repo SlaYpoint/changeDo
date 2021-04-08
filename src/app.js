@@ -10,10 +10,14 @@ const curr = [2000, 500, 100, 20, 10, 5, 1];
 btn.addEventListener('click', () => {
     const billAmt = Number(amt.value);
     const cash = Number(received.value);
-    // console.log(billAmt);
-    balance = cash - billAmt;
-    // console.log(balance);
-    balance === 0 ? console.log("No balance") : cash < billAmt ? console.log("Insufficient cash") : denomCalc(balance);
+
+    if (billAmt != 0 && cash != 0) {
+        balance = cash - billAmt;
+        balance === 0 ? console.log("No balance") : cash < billAmt ? console.log("Insufficient cash") : denomCalc(balance);
+    }else{
+        alert("please fill all");
+    }
+   
 })
 
 // Logic
