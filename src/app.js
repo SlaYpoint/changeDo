@@ -13,20 +13,26 @@ btn.addEventListener('click', () => {
 
     if (billAmt != 0 && cash != 0) {
         balance = cash - billAmt;
-        balance === 0 ? console.log("No balance") : cash < billAmt ? console.log("Insufficient cash") : denomCalc(balance);
-    }else{
-        alert("please fill all");
+        balance === 0 ? output.innerText = "\n\nNo Balance 🤗" : cash < billAmt ? output.innerText = "\n\nInsufficient Cash 🙃" : denomCalc(balance);
+    }else if(billAmt === 0){
+        amt.placeholder = "Bill amount ?";
+    } else {
+        received.placeholder = "How much received ?";
     }
-   
-})
+});
 
 // Logic
 const denomCalc = (bal) => {
+    // Give it a heading
+    const heading = document.createElement('h4');
+    heading.appendChild(document.createTextNode("Denominations"));
+    output.appendChild(heading);
+
     curr.map((money) => {
         let num = Math.floor(bal / money);
         bal -= num * money;
         if (num != 0) {
-            console.log(`${num} x $ ${money}`);
+            output.innerText += `\n ₹ ${money} x ${num} 💵 ` ;
         }
     });
 } 
