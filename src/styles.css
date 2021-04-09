@@ -14,7 +14,7 @@
 
 body{
     margin: 0;
-    padding: 3rem 0rem;
+    padding: 4rem 0rem;
     background: var(--bg-color-100);
     font-family: 'Arvo', serif;
     text-align: center;
@@ -71,4 +71,19 @@ header{
 .help > p{
     text-align: justify;
     margin: 1rem;
+}
+
+footer{
+    margin: 4rem;
+    width: auto;
+}
+
+footer > a{
+    text-decoration: none;
+}
+
+.icon{
+    width: 2rem;
+    margin: 0.5rem;
+    fill: var(--primary);
 }
