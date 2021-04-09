@@ -13,7 +13,7 @@ btn.addEventListener('click', () => {
 
     if (billAmt != 0 && cash != 0) {
         balance = cash - billAmt;
-        balance === 0 ? output.innerText = "\n\nNo Balance 🤗" : cash < billAmt ? output.innerText = "\n\nInsufficient Cash 🙃" : denomCalc(balance);
+        balance === 0 ? output.innerText = "\n\nNo Balance 🤗" : cash > billAmt ? denomCalc(balance) : output.innerText = "\n\nInsufficient Cash 🙃" ;
     }else if(billAmt === 0){
         amt.placeholder = "Bill amount ?";
     } else {
@@ -22,6 +22,7 @@ btn.addEventListener('click', () => {
 });
 
 // Logic
+
 const denomCalc = (bal) => {
     // Give it a heading
     const heading = document.createElement('h4');
