@@ -13,22 +13,19 @@ btn.addEventListener('click', () => {
 
     if (billAmt != 0 && cash != 0) {
         balance = cash - billAmt;
-        balance === 0 ? output.innerText = "\n\nNo Balance 🤗" : cash > billAmt ? denomCalc(balance) : output.innerText = "\n\nInsufficient Cash 🙃" ;
+        balance === 0 ? output.innerText = "\nNo Balance 🤗\n\n" : cash > billAmt ? denomCalc(balance) : output.innerText = "\nInsufficient Cash 🙃\n\n" ;
     }else if(billAmt === 0){
         amt.placeholder = "Bill amount ?";
     } else {
         received.placeholder = "How much received ?";
     }
-});
+}, false);
 
 // Logic
 
 const denomCalc = (bal) => {
-    // Give it a heading
-    const heading = document.createElement('h4');
-    heading.appendChild(document.createTextNode("Denominations"));
-    output.appendChild(heading);
-
+    
+    document.querySelector('h4').innerText = "\nDenominations\n";
     curr.map((money) => {
         let num = Math.floor(bal / money);
         bal -= num * money;
@@ -37,3 +34,5 @@ const denomCalc = (bal) => {
         }
     });
 } 
+
+window.onload = "init";
