@@ -29,7 +29,6 @@ body{
     margin: auto;
     border-radius: 1.5rem;
     padding-bottom: 0.4rem;
-    
 }
 
 header{
@@ -47,7 +46,7 @@ header{
     margin: 1rem ;
     background: var(--bg-color-300);
     border-radius: 1rem;
-    border: 1.5px solid var(--bg-color-600r);
+    border: 1.5px solid var(--bg-color-600);
 }
 
 .btn{
