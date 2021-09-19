@@ -4,7 +4,6 @@ const output = document.querySelector(".denoms");
 // Currencies
 const curr = [2000, 500, 100, 20, 10, 5, 1];
 
-
 btn.addEventListener('click', () => {
     const amt = document.querySelector("#bal");
     const received = document.querySelector("#rcvd");
@@ -35,5 +34,3 @@ const denomCalc = (bal) => {
         }
     });
 } 
-
-window.onload = "init";
