@@ -1,5 +1,3 @@
-const amt = document.querySelector("#bal");
-const received = document.querySelector("#rcvd");
 const btn = document.querySelector("button");
 const output = document.querySelector(".denoms");
 
@@ -8,6 +6,9 @@ const curr = [2000, 500, 100, 20, 10, 5, 1];
 
 
 btn.addEventListener('click', () => {
+    const amt = document.querySelector("#bal");
+    const received = document.querySelector("#rcvd");
+    
     const billAmt = Number(amt.value);
     const cash = Number(received.value);
 
